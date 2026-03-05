@@ -1,0 +1,62 @@
+\documentclass[11pt]{letter}
+\usepackage[margin=2.5cm]{geometry}
+\usepackage{hyperref}
+
+\signature{Marco Narcisi}
+\address{Independent Researcher\\Castellalto, Abruzzo, Italy\\
+\texttt{mnarc123@pm.me}}
+
+\begin{document}
+
+\begin{letter}{The Editor\\Classical and Quantum Gravity}
+
+\opening{Dear Editor,}
+
+We submit for your consideration our manuscript titled
+\emph{``Computational search for emergent spacetime geometry from
+cellular automata on dynamic graphs''} for publication in
+Classical and Quantum Gravity.
+
+This work presents \textsc{Discretum}, a GPU-accelerated computational
+framework for the systematic search of local update rules on dynamic
+graphs that produce emergent geometric structures.  Using CMA-ES and
+genetic algorithm optimisation over a 14-dimensional parameter space,
+we identify rules that generate graphs with Hausdorff dimension
+approaching~4 from an initially four-dimensional hypercubic lattice.
+
+While our best rules do not achieve the full target of flat
+four-dimensional geometry---the spectral dimension is not improved
+relative to the bare lattice, and the Ollivier--Ricci curvature
+converges to a negative (hyperbolic) value---we provide a detailed
+quantitative analysis of why this occurs.  The connectivity collapse
+at large system sizes and the absence of spectral crossover are
+consistent with the known failure of Euclidean (acausal) dynamical
+triangulations, and we identify the imposition of causal structure as
+the critical missing ingredient.
+
+We believe this work makes three contributions relevant to the CQG
+readership:
+\begin{enumerate}
+\item A validated, open-source framework for computational exploration
+  of discrete quantum gravity models, including GPU-accelerated
+  Ollivier--Ricci curvature and ensemble diagnostics.
+\item Quantitative constraints on what simple acausal local rules can
+  and cannot achieve: correct Hausdorff dimension scaling but anomalous
+  spectral dimension, hyperbolic curvature, and connectivity
+  instability.
+\item A parameter-space analysis identifying topological dynamics
+  (edge addition and node merging) as the dominant factors controlling
+  emergent geometry, with state transitions playing a negligible role.
+\end{enumerate}
+
+The author declares no competing interests and no external
+funding was received for this research.
+
+The complete code is publicly available at
+\url{https://github.com/mnarc123/discretum} under the MIT
+licence.  All results are reproducible from the provided scripts.
+
+\closing{Sincerely,}
+
+\end{letter}
+\end{document}
