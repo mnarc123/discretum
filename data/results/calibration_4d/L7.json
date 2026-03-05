@@ -1,0 +1,18 @@
+{
+  "L": 7,
+  "M": 8232,
+  "N": 2401,
+  "avg_degree": 6.857142857142857,
+  "curvature_samples": 500,
+  "cv_degree": 0.13176156917368217,
+  "d_H": 2.9058074617285277,
+  "d_s": 0.3334719240665436,
+  "d_s_error": 0.9486427903175354,
+  "graph_type": "lattice_4d",
+  "hausdorff_sources": 50,
+  "mean_curvature": 0.007965123653411866,
+  "n_components": 1,
+  "spectral_steps": 1000,
+  "spectral_walkers": 10000,
+  "std_curvature": 0.012440539410280343
+}
