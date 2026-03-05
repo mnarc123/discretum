@@ -1,0 +1,34 @@
+{
+    "optimizer": "cmaes",
+    "max_generations": 500,
+    "population_size": 0,
+    "evo_steps": 200,
+    "graph_size": 625,
+    "graph_type": "lattice_4d",
+    "fitness_version": 3,
+    "seed": 12345,
+    "sigma0": 0.3,
+
+    "target_dimension": 4.0,
+
+    "w_hausdorff": 2.0,
+    "w_curvature": 1.5,
+    "w_spectral": 1.0,
+    "w_connectivity": 10.0,
+    "w_stability": 0.5,
+    "w_regularity": 0.3,
+    "w_density": 3.0,
+    "w_degradation": 2.0,
+
+    "density_k_max_factor": 2.5,
+    "curvature_fluctuation_penalty": 0.5,
+    "curvature_samples": 200,
+
+    "use_spectral_v2": true,
+    "spectral_walkers": 5000,
+    "spectral_steps": 150,
+    "hausdorff_sources": 20,
+
+    "checkpoint_dir": "checkpoints/4d_v3_cmaes",
+    "checkpoint_interval": 5
+}

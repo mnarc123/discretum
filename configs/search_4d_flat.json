@@ -1,0 +1,27 @@
+{
+    "optimizer": "ga",
+    "max_generations": 5000,
+    "population_size": 200,
+    "evo_steps": 300,
+    "graph_size": 625,
+    "graph_type": "lattice_4d",
+    "fitness_version": 2,
+    "seed": 2024,
+    "sigma0": 0.5,
+
+    "target_dimension": 4.0,
+    "w_hausdorff": 2.0,
+    "w_curvature": 1.5,
+    "w_spectral": 1.0,
+    "w_connectivity": 10.0,
+    "w_stability": 0.5,
+    "w_regularity": 0.3,
+    "curvature_fluctuation_penalty": 0.5,
+    "curvature_samples": 300,
+    "spectral_walkers": 5000,
+    "spectral_steps": 500,
+    "hausdorff_sources": 30,
+
+    "checkpoint_dir": "data/checkpoints/4d_flat_ga",
+    "checkpoint_interval": 5
+}

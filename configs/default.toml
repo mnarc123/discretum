@@ -1,0 +1,57 @@
+[graph]
+initial_type = "lattice_4d"     # "lattice_3d", "lattice_4d", "random_regular", "erdos_renyi"
+initial_size = 10000            # Numero nodi iniziale
+lattice_dims = [10, 10, 10, 10] # Dimensioni per reticolo (se applicabile)
+max_degree = 12                 # Grado massimo consentito
+
+[automaton]
+alphabet_size = 3               # q = dimensione alfabeto
+laziness = 0.0                  # α per random walk nella curvatura
+state_table_size = 64           # Dimensione tabella lookup per regola
+num_weights = 3                 # Pesi per soglia (uno per stato)
+
+[evolution]
+total_steps = 10000             # Passi temporali totali
+transient_steps = 2000          # Passi da scartare (termalizzazione)
+sample_interval = 100           # Intervallo campionamento metriche
+checkpoint_interval = 1000      # Intervallo checkpoint
+
+[geometry]
+ollivier_alpha = 0.0            # Laziness curvatura Ollivier-Ricci
+sinkhorn_iterations = 50        # Iterazioni Sinkhorn per W_1 su GPU
+sinkhorn_epsilon = 0.01         # Regolarizzazione entropica
+random_walkers = 10000          # Numero walker per dim. spettrale
+walk_max_steps = 1000           # Passi massimi random walk
+
+[search]
+method = "ga_then_cmaes"        # "ga", "cmaes", "ga_then_cmaes"
+ga_population = 200             # Dimensione popolazione GA
+ga_generations = 3000           # Generazioni GA
+ga_tournament_k = 3             # Dimensione torneo
+ga_crossover_alpha = 0.5        # BLX-α
+ga_mutation_sigma = 0.1         # σ mutazione iniziale
+ga_elitism_fraction = 0.05      # Frazione élite
+cmaes_sigma0 = 0.1              # σ iniziale CMA-ES
+cmaes_max_generations = 2000    # Max generazioni CMA-ES
+num_ensemble = 5                # Realizzazioni per media ensemble
+
+[fitness]
+weight_ricci = 1.0              # w_1
+weight_dim = 0.5                # w_2
+weight_stability = 0.3          # w_3
+weight_connectivity = 10.0      # w_4
+target = "flat"                 # "flat", "de_sitter", "schwarzschild", "gw_linearized"
+
+[hardware]
+use_gpu = true                  # Usare GPU per kernel HIP
+gpu_block_size = 256            # Thread per block
+num_cpu_threads = 12            # Thread CPU per operazioni topologiche
+
+[output]
+results_dir = "data/results"
+checkpoint_dir = "data/checkpoints"
+log_dir = "data/logs"
+log_level = "info"              # "debug", "info", "warn", "error"
+
+[reproducibility]
+master_seed = 42                # Seed master per riproducibilità
