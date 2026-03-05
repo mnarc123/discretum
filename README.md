@@ -262,3 +262,6 @@ Modified CSR with O(1) amortised edge add/remove, node split/merge, and edge rew
 ## License
 
 MIT License — see LICENSE file for details.
+
+[![DOI](https://zenodo.org/badge/1173414754.svg)](https://doi.org/10.5281/zenodo.18874775)
+
