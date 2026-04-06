@@ -242,6 +242,35 @@ Six-component squared-penalty function:
 | 10 | 1000 | 2.56 | −0.097 |
 | 15 | 3775 | **2.93** | −0.153 |
 
+### Paper 3: Discrete Einstein-Hilbert Action (Monte Carlo)
+
+Phase diagram of a discrete gravitational action based on Ollivier-Ricci
+curvature, explored via Metropolis Monte Carlo with edge-only moves.
+
+**Three-phase structure** (L=5, N=125):
+
+| Phase | α | ⟨κ⟩ | d_s | Acc. |
+|-----------|---------|--------|---------|------|
+| Crumpled | < 0.5 | −0.22 | ≈ 1.1 | 91% |
+| Physical | 0.9–1.1 | ≈ −0.07 | ≈ 0.9 | 80% |
+| Collapsed | > 2 | +0.7 | < 0.5 | < 25% |
+
+**Finite-size scaling** (optimal coupling, 10 seeds/size):
+
+| L | N | d_s | d_H | ⟨κ⟩ |
+|---|-----|-------------|-------------|------------------|
+| 4 | 64 | 1.06 ± 0.05 | 1.97 ± 0.08 | −0.046 ± 0.012 |
+| 5 | 125 | 0.94 ± 0.06 | 1.78 ± 0.07 | −0.072 ± 0.005 |
+| 6 | 216 | 0.95 ± 0.04 | 1.77 ± 0.07 | −0.093 ± 0.005 |
+| 7 | 343 | 0.94 ± 0.03 | 1.72 ± 0.04 | −0.093 ± 0.002 |
+
+**Manifold-like constraints** (Phase 13):
+- Manifold defect penalty (μ): drives Δ→0 but *reduces* d_s
+- Fiedler connectivity (η): boosts d_s to ≈1.4 at L=5–6, but declines at L≥7
+- Neither constraint escapes the branched-polymer universality class
+
+**Submitted to**: Physical Review E (Statistical Physics)
+
 ## Key Concepts
 
 ### Ollivier-Ricci Curvature
@@ -262,6 +291,3 @@ Modified CSR with O(1) amortised edge add/remove, node split/merge, and edge rew
 ## License
 
 MIT License — see LICENSE file for details.
-
-[![DOI](https://zenodo.org/badge/1173414754.svg)](https://doi.org/10.5281/zenodo.18874775)
-
